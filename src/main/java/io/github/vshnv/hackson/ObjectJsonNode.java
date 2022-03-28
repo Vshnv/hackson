@@ -49,6 +49,7 @@ public final class ObjectJsonNode implements JsonNode {
                 break;
             }
         }
+        skipSpaces(indexedString);
         parseAssert(indexedString.getCharAtIndex() == '}');
         indexedString.incrementIndex();
     }

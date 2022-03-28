@@ -2,6 +2,7 @@ package io.github.vshnv.hackson;
 
 import java.util.Arrays;
 import java.util.HashMap;
+import java.util.LinkedHashMap;
 import java.util.Map;
 import java.util.function.Function;
 
@@ -11,7 +12,7 @@ public final class Json {
     }
 
     public static JsonNode obj(final ObjectEntry... nodes) {
-        final Map<String, JsonNode> nodeMap = new HashMap<>();
+        final Map<String, JsonNode> nodeMap = new LinkedHashMap<>();
         for (final ObjectEntry entry : nodes) {
             nodeMap.put(entry.name(), entry.value());
         }
