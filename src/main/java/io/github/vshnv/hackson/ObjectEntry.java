@@ -39,7 +39,6 @@ public interface ObjectEntry extends Function<Void, JsonNode>, Serializable {
         }
     }
 
-
     default JsonNode value() {
         return apply(null);
     }
