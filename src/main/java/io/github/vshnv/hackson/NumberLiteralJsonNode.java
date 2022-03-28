@@ -47,6 +47,11 @@ public final class NumberLiteralJsonNode implements LiteralJsonNode<Number> {
         this.number = number;
     }
 
+    @Override
+    public String toString() {
+        return stringify();
+    }
+
     private static boolean approxEquals(final double a, final double b) {
         return Math.abs(a - b) < 0.0000001;
     }

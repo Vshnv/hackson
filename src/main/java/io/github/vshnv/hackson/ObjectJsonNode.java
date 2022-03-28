@@ -52,4 +52,9 @@ public final class ObjectJsonNode implements JsonNode {
         parseAssert(indexedString.getCharAtIndex() == '}');
         indexedString.incrementIndex();
     }
+
+    @Override
+    public String toString() {
+        return stringify();
+    }
 }

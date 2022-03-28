@@ -44,4 +44,9 @@ public class StringLiteralJsonNode implements LiteralJsonNode<String> {
     public void setValue(final String value) {
         this.value = value;
     }
+
+    @Override
+    public String toString() {
+        return stringify();
+    }
 }
