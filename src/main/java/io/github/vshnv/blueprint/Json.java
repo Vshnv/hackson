@@ -1,10 +1,8 @@
-package io.github.vshnv.hackson;
+package io.github.vshnv.blueprint;
 
 import java.util.Arrays;
-import java.util.HashMap;
 import java.util.LinkedHashMap;
 import java.util.Map;
-import java.util.function.Function;
 
 public final class Json {
     private Json() {

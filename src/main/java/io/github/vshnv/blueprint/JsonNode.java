@@ -1,4 +1,4 @@
-package io.github.vshnv.hackson;
+package io.github.vshnv.blueprint;
 
 public interface JsonNode {
     void writeTo(final StringBuffer buffer);

@@ -1,4 +1,4 @@
-package io.github.vshnv.hackson;
+package io.github.vshnv.blueprint;
 
 import java.lang.invoke.SerializedLambda;
 import java.util.Arrays;

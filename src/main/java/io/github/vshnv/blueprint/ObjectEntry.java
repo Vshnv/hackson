@@ -1,4 +1,4 @@
-package io.github.vshnv.hackson;
+package io.github.vshnv.blueprint;
 
 import java.io.Serializable;
 import java.lang.invoke.SerializedLambda;
@@ -6,7 +6,7 @@ import java.lang.reflect.Method;
 import java.util.Objects;
 import java.util.function.Function;
 
-import static io.github.vshnv.hackson.LambdaParameterUtils.parameterName;
+import static io.github.vshnv.blueprint.LambdaParameterUtils.parameterName;
 
 public interface ObjectEntry extends Function<Void, JsonNode>, Serializable {
     default String name() {

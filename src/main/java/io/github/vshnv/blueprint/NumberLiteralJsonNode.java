@@ -1,7 +1,7 @@
-package io.github.vshnv.hackson;
+package io.github.vshnv.blueprint;
 
-import static io.github.vshnv.hackson.ParsingUtils.parseAssert;
-import static io.github.vshnv.hackson.ParsingUtils.skipSpaces;
+import static io.github.vshnv.blueprint.ParsingUtils.parseAssert;
+import static io.github.vshnv.blueprint.ParsingUtils.skipSpaces;
 
 public final class NumberLiteralJsonNode implements LiteralJsonNode<Number> {
     private Number number;

@@ -1,11 +1,11 @@
-package io.github.vshnv.hackson;
+package io.github.vshnv.blueprint;
 
 import com.google.gson.Gson;
 import com.google.gson.JsonArray;
 import com.google.gson.JsonObject;
 import org.junit.jupiter.api.Test;
 
-import static io.github.vshnv.hackson.Json.*;
+import static io.github.vshnv.blueprint.Json.*;
 import static org.junit.jupiter.api.Assertions.*;
 
 class ObjectJsonNodeTest {

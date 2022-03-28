@@ -1,4 +1,4 @@
-package io.github.vshnv.hackson;
+package io.github.vshnv.blueprint;
 
 import java.util.HashMap;
 import java.util.Map;

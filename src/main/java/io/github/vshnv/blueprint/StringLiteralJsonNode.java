@@ -1,7 +1,7 @@
-package io.github.vshnv.hackson;
+package io.github.vshnv.blueprint;
 
-import static io.github.vshnv.hackson.ParsingUtils.parseAssert;
-import static io.github.vshnv.hackson.ParsingUtils.skipSpaces;
+import static io.github.vshnv.blueprint.ParsingUtils.parseAssert;
+import static io.github.vshnv.blueprint.ParsingUtils.skipSpaces;
 
 public class StringLiteralJsonNode implements LiteralJsonNode<String> {
     private String value;

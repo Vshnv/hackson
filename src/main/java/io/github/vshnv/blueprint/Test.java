@@ -1,11 +1,10 @@
-package io.github.vshnv.hackson;
+package io.github.vshnv.blueprint;
 
 import com.google.gson.Gson;
 
 import java.util.Map;
-import java.util.regex.Matcher;
 
-import static io.github.vshnv.hackson.Json.*;
+import static io.github.vshnv.blueprint.Json.*;
 
 public class Test {
     public static void main(String[] args) {

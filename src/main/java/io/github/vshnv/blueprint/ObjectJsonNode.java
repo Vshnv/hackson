@@ -1,8 +1,8 @@
-package io.github.vshnv.hackson;
+package io.github.vshnv.blueprint;
 
 import java.util.Map;
 
-import static io.github.vshnv.hackson.ParsingUtils.*;
+import static io.github.vshnv.blueprint.ParsingUtils.*;
 
 public final class ObjectJsonNode implements JsonNode {
     private final Map<String, JsonNode> children;
