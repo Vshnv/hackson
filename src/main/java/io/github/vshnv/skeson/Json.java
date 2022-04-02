@@ -51,23 +51,23 @@ public final class Json {
         return new BooleanLiteralJsonNode(GLOBAL_READER_REGISTRY.getReader(Boolean.class), value);
     }
 
-    public static JsonNode matchArray() {
+    public static LiteralReadingJsonNode<ArrayJsonNode> matchArray() {
         return new LiteralReadingJsonNode<>(GLOBAL_READER_REGISTRY.getReader(ArrayJsonNode.class), null);
     }
 
-    public static JsonNode matchObject() {
-        return new LiteralReadingJsonNode<>(GLOBAL_READER_REGISTRY.getReader(ObjectJsonNode.class), null);
+    public static LiteralReadingJsonNode<ObjectJsonNode> matchObject() {
+        return new LiteralReadingJsonNode<ObjectJsonNode>(GLOBAL_READER_REGISTRY.getReader(ObjectJsonNode.class), null);
     }
 
-    public static JsonNode matchBoolean() {
-        return new LiteralReadingJsonNode<>(GLOBAL_READER_REGISTRY.getReader(Boolean.class), null);
+    public static LiteralReadingJsonNode<Boolean> matchBoolean() {
+        return new LiteralReadingJsonNode<>(GLOBAL_READER_REGISTRY.getReader(Boolean.class), new BooleanLiteralJsonNode(GLOBAL_READER_REGISTRY.getReader(Boolean.class), false));
     }
 
-    public static JsonNode matchNumber() {
-        return new LiteralReadingJsonNode<>(GLOBAL_READER_REGISTRY.getReader(Number.class), null);
+    public static LiteralReadingJsonNode<Number> matchNumber() {
+        return new LiteralReadingJsonNode<>(GLOBAL_READER_REGISTRY.getReader(Number.class), new NumberLiteralJsonNode(GLOBAL_READER_REGISTRY.getReader(Number.class), 0));
     }
 
-    public static JsonNode matchString() {
-        return new StringLiteralJsonNode(GLOBAL_READER_REGISTRY.getReader(String.class), null);
+    public static LiteralReadingJsonNode<String> matchString() {
+        return new LiteralReadingJsonNode<>(GLOBAL_READER_REGISTRY.getReader(String.class), new StringLiteralJsonNode(GLOBAL_READER_REGISTRY.getReader(String.class), ""));
     }
 }
