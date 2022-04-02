@@ -1,13 +1,20 @@
-package io.github.vshnv.blueprint;
+package io.github.vshnv.blueprint.branching;
+
+import io.github.vshnv.blueprint.IndexedString;
+import io.github.vshnv.blueprint.JsonNode;
+import io.github.vshnv.blueprint.literal.StringLiteralJsonNode;
+import io.github.vshnv.blueprint.reader.JsonNodeReader;
 
 import java.util.Map;
 
 import static io.github.vshnv.blueprint.ParsingUtils.*;
 
 public final class ObjectJsonNode implements JsonNode {
+    private final JsonNodeReader<String> stringJsonNodeReader;
     private final Map<String, JsonNode> children;
 
-    public ObjectJsonNode(final Map<String, JsonNode> children) {
+    public ObjectJsonNode(final JsonNodeReader<String> stringJsonNodeReader, final Map<String, JsonNode> children) {
+        this.stringJsonNodeReader = stringJsonNodeReader;
         this.children = children;
     }
 
@@ -35,13 +42,12 @@ public final class ObjectJsonNode implements JsonNode {
         indexedString.incrementIndex();
         while (indexedString.getCharAtIndex() != '}') {
             skipSpaces(indexedString);
-            final StringLiteralJsonNode stringLiteralJsonNode = new StringLiteralJsonNode(null);
-            stringLiteralJsonNode.match(indexedString);
+            final String key = stringJsonNodeReader.read(indexedString);
             skipSpaces(indexedString);
             parseAssert(indexedString.getCharAtIndex() == ':');
             indexedString.incrementIndex();
             skipSpaces(indexedString);
-            children.get(stringLiteralJsonNode.getValue()).match(indexedString);
+            children.get(key).match(indexedString);
             skipSpaces(indexedString);
             if (indexedString.getCharAtIndex() == ',') {
                 indexedString.incrementIndex();
