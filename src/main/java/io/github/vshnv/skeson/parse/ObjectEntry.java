@@ -10,14 +10,15 @@ import java.util.function.Function;
 
 import static io.github.vshnv.skeson.LambdaParameterUtils.parameterName;
 
-public interface ObjectEntry extends Function<Void, JsonNode>, Serializable {
+public interface ObjectEntry extends Function<String, JsonNode>, Serializable {
     default String name() {
-        checkParametersEnabled();
-        return parameterName(this, 0);
+        final SerializedLambda serializedLambda = asSerialized();
+        checkParametersEnabled(serializedLambda);
+        return parameterName(serializedLambda, this);
     }
 
-    default void checkParametersEnabled() {
-        if (Objects.equals("arg0", parameterName(this, 0))) {
+    default void checkParametersEnabled(final SerializedLambda serializedLambda) {
+        if (Objects.equals("arg0", parameterName(serializedLambda, this))) {
             throw new IllegalStateException("You need to compile with javac -parameters for parameter reflection to work; You also need java 8u60 or newer to use it with lambdas");
         }
     }
@@ -32,9 +33,9 @@ public interface ObjectEntry extends Function<Void, JsonNode>, Serializable {
         }
     }
 
-    default Class<?> implClass() {
+    default Class<?> implClass(final SerializedLambda serializedLambda) {
         try {
-            String className = asSerialized().getImplClass().replaceAll("/", ".");
+            String className = serializedLambda.getImplClass().replaceAll("/", ".");
             return Class.forName(className);
         } catch (Exception e) {
             throw new RuntimeException(e);
@@ -42,7 +43,7 @@ public interface ObjectEntry extends Function<Void, JsonNode>, Serializable {
     }
 
     default JsonNode value() {
-        return apply(null);
+        return apply(name());
     }
 
     class UnableToGuessMethodException extends RuntimeException {}

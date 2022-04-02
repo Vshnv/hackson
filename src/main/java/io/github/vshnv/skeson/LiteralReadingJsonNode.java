@@ -30,4 +30,8 @@ public class LiteralReadingJsonNode<T> implements JsonNode {
         final T t = nodeReader.read(indexedString);
         node.setValue(t);
     }
+
+    public T getValue() {
+        return node.getValue();
+    }
 }
