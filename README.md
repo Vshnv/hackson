@@ -1,6 +1,6 @@
 
 # Skeson
-JSON Library for Java with a focus on DSL
+JSON Library for Java with a focus on providing a clean DSL
 
 
 ```java
