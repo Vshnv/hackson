@@ -68,12 +68,11 @@ class JsonAdapterTest {
             final String objectName = object.getName();
             final int objectAge = object.getAge();
             final int objectHeight = object.getHeight();
-            final JsonNode node = obj(
+            return obj(
                     name -> lit(objectName),
                     age -> lit(objectAge),
                     height -> lit(objectHeight)
             );
-            return node;
         }
 
         @Override
