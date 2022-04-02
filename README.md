@@ -20,6 +20,8 @@ obj(
 
 ## Usage Example
 
+### IMPORTANT: Your application/library must be compiled with the `-parameters` command line argument
+
 ### Type 1 (Preffered)
 <details>
   <summary>JsonAdapter</summary>
