@@ -1,5 +1,7 @@
 package io.github.vshnv.blueprint;
 
+import io.github.vshnv.blueprint.reader.JsonNodeReader;
+
 public interface JsonNode {
     void writeTo(final StringBuffer buffer);
     void match(final IndexedString indexedString);
