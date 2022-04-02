@@ -1,10 +1,10 @@
-package io.github.vshnv.blueprint.literal;
+package io.github.vshnv.skeson.literal;
 
-import io.github.vshnv.blueprint.IndexedString;
-import io.github.vshnv.blueprint.LiteralJsonNode;
-import io.github.vshnv.blueprint.reader.JsonNodeReader;
+import io.github.vshnv.skeson.parse.IndexedString;
+import io.github.vshnv.skeson.LiteralJsonNode;
+import io.github.vshnv.skeson.reader.JsonNodeReader;
 
-import static io.github.vshnv.blueprint.ParsingUtils.parseAssert;
+import static io.github.vshnv.skeson.parse.ParsingUtils.parseAssert;
 
 public final class NumberLiteralJsonNode implements LiteralJsonNode<Number> {
     private final JsonNodeReader<Number> reader;

@@ -1,9 +1,9 @@
-package io.github.vshnv.blueprint.reader;
+package io.github.vshnv.skeson.reader;
 
-import io.github.vshnv.blueprint.IndexedString;
+import io.github.vshnv.skeson.parse.IndexedString;
 
-import static io.github.vshnv.blueprint.ParsingUtils.parseAssert;
-import static io.github.vshnv.blueprint.ParsingUtils.skipSpaces;
+import static io.github.vshnv.skeson.parse.ParsingUtils.parseAssert;
+import static io.github.vshnv.skeson.parse.ParsingUtils.skipSpaces;
 
 public class StringLiteralJsonNodeReader implements JsonNodeReader<String> {
 

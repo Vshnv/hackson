@@ -1,10 +1,8 @@
-package io.github.vshnv.blueprint.reader;
+package io.github.vshnv.skeson.reader;
 
-import io.github.vshnv.blueprint.IndexedString;
-import io.github.vshnv.blueprint.LiteralJsonNode;
-import io.github.vshnv.blueprint.literal.NumberLiteralJsonNode;
+import io.github.vshnv.skeson.parse.IndexedString;
 
-import static io.github.vshnv.blueprint.ParsingUtils.skipSpaces;
+import static io.github.vshnv.skeson.parse.ParsingUtils.skipSpaces;
 
 public class NumberLiteralJsonNodeReader implements JsonNodeReader<Number> {
     @Override

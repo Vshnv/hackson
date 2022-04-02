@@ -1,4 +1,4 @@
-package io.github.vshnv.blueprint;
+package io.github.vshnv.skeson.parse;
 
 import java.util.HashMap;
 import java.util.Map;

@@ -1,4 +1,6 @@
-package io.github.vshnv.blueprint;
+package io.github.vshnv.skeson;
+
+import io.github.vshnv.skeson.parse.ObjectEntry;
 
 import java.lang.invoke.SerializedLambda;
 import java.util.Arrays;

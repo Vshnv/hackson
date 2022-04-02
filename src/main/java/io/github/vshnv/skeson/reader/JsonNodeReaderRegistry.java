@@ -1,4 +1,4 @@
-package io.github.vshnv.blueprint.reader;
+package io.github.vshnv.skeson.reader;
 
 import java.util.Map;
 

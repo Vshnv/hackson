@@ -1,4 +1,4 @@
-package io.github.vshnv.blueprint;
+package io.github.vshnv.skeson.parse;
 
 public class IndexedString {
     private final String string;

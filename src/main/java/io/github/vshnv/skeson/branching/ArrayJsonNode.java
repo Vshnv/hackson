@@ -1,13 +1,12 @@
-package io.github.vshnv.blueprint.branching;
+package io.github.vshnv.skeson.branching;
 
-import io.github.vshnv.blueprint.IndexedString;
-import io.github.vshnv.blueprint.JsonNode;
-import io.github.vshnv.blueprint.reader.JsonNodeReader;
+import io.github.vshnv.skeson.parse.IndexedString;
+import io.github.vshnv.skeson.JsonNode;
 
 import java.util.List;
 
-import static io.github.vshnv.blueprint.ParsingUtils.parseAssert;
-import static io.github.vshnv.blueprint.ParsingUtils.skipSpaces;
+import static io.github.vshnv.skeson.parse.ParsingUtils.parseAssert;
+import static io.github.vshnv.skeson.parse.ParsingUtils.skipSpaces;
 
 public final class ArrayJsonNode implements JsonNode {
     private final List<JsonNode> nodeList;

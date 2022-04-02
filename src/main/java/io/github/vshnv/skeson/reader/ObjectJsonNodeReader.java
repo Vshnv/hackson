@@ -1,18 +1,14 @@
-package io.github.vshnv.blueprint.reader;
+package io.github.vshnv.skeson.reader;
 
-import io.github.vshnv.blueprint.IndexedString;
-import io.github.vshnv.blueprint.JsonNode;
-import io.github.vshnv.blueprint.branching.ArrayJsonNode;
-import io.github.vshnv.blueprint.branching.ObjectJsonNode;
-import io.github.vshnv.blueprint.literal.BooleanLiteralJsonNode;
-import io.github.vshnv.blueprint.literal.NumberLiteralJsonNode;
-import io.github.vshnv.blueprint.literal.StringLiteralJsonNode;
+import io.github.vshnv.skeson.parse.IndexedString;
+import io.github.vshnv.skeson.JsonNode;
+import io.github.vshnv.skeson.branching.ObjectJsonNode;
 
 import java.util.HashMap;
 import java.util.Map;
 
-import static io.github.vshnv.blueprint.ParsingUtils.parseAssert;
-import static io.github.vshnv.blueprint.ParsingUtils.skipSpaces;
+import static io.github.vshnv.skeson.parse.ParsingUtils.parseAssert;
+import static io.github.vshnv.skeson.parse.ParsingUtils.skipSpaces;
 
 public class ObjectJsonNodeReader implements JsonNodeReader<ObjectJsonNode> {
     private final JsonNodeReaderRegistry nodeReaderRegistry;

@@ -1,15 +1,13 @@
-package io.github.vshnv.blueprint.reader;
+package io.github.vshnv.skeson.reader;
 
-import io.github.vshnv.blueprint.IndexedString;
-import io.github.vshnv.blueprint.JsonNode;
-import io.github.vshnv.blueprint.ParsingUtils;
-import io.github.vshnv.blueprint.branching.ArrayJsonNode;
-import io.github.vshnv.blueprint.literal.BooleanLiteralJsonNode;
-import io.github.vshnv.blueprint.literal.NumberLiteralJsonNode;
-import io.github.vshnv.blueprint.literal.StringLiteralJsonNode;
+import io.github.vshnv.skeson.parse.IndexedString;
+import io.github.vshnv.skeson.JsonNode;
+import io.github.vshnv.skeson.branching.ArrayJsonNode;
+import io.github.vshnv.skeson.literal.BooleanLiteralJsonNode;
+import io.github.vshnv.skeson.literal.NumberLiteralJsonNode;
+import io.github.vshnv.skeson.literal.StringLiteralJsonNode;
 
-import static io.github.vshnv.blueprint.ParsingUtils.parseAssert;
-import static io.github.vshnv.blueprint.ParsingUtils.skipSpaces;
+import static io.github.vshnv.skeson.parse.ParsingUtils.skipSpaces;
 
 public class LookaheadJsonNodeReader implements JsonNodeReader<JsonNode> {
     private final JsonNodeReaderRegistry nodeReaderRegistry;

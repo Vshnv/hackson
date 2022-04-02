@@ -1,11 +1,12 @@
-package io.github.vshnv.blueprint;
+package io.github.vshnv.skeson;
 
-import io.github.vshnv.blueprint.branching.ArrayJsonNode;
-import io.github.vshnv.blueprint.branching.ObjectJsonNode;
-import io.github.vshnv.blueprint.literal.BooleanLiteralJsonNode;
-import io.github.vshnv.blueprint.literal.NumberLiteralJsonNode;
-import io.github.vshnv.blueprint.literal.StringLiteralJsonNode;
-import io.github.vshnv.blueprint.reader.*;
+import io.github.vshnv.skeson.branching.ArrayJsonNode;
+import io.github.vshnv.skeson.branching.ObjectJsonNode;
+import io.github.vshnv.skeson.literal.BooleanLiteralJsonNode;
+import io.github.vshnv.skeson.literal.NumberLiteralJsonNode;
+import io.github.vshnv.skeson.literal.StringLiteralJsonNode;
+import io.github.vshnv.skeson.parse.ObjectEntry;
+import io.github.vshnv.skeson.reader.*;
 
 import java.util.Arrays;
 import java.util.HashMap;

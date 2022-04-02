@@ -1,8 +1,7 @@
-package io.github.vshnv.blueprint;
+package io.github.vshnv.skeson.parse;
 
 import java.util.ArrayList;
 import java.util.Arrays;
-import java.util.Collection;
 import java.util.List;
 
 public class ParsingUtils {

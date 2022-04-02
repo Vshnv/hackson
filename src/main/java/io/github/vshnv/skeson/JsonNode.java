@@ -1,6 +1,6 @@
-package io.github.vshnv.blueprint;
+package io.github.vshnv.skeson;
 
-import io.github.vshnv.blueprint.reader.JsonNodeReader;
+import io.github.vshnv.skeson.parse.IndexedString;
 
 public interface JsonNode {
     void writeTo(final StringBuffer buffer);

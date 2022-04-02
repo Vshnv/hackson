@@ -1,14 +1,14 @@
-package io.github.vshnv.blueprint.reader;
+package io.github.vshnv.skeson.reader;
 
-import io.github.vshnv.blueprint.IndexedString;
-import io.github.vshnv.blueprint.JsonNode;
-import io.github.vshnv.blueprint.branching.ArrayJsonNode;
+import io.github.vshnv.skeson.parse.IndexedString;
+import io.github.vshnv.skeson.JsonNode;
+import io.github.vshnv.skeson.branching.ArrayJsonNode;
 
 import java.util.ArrayList;
 import java.util.List;
 
-import static io.github.vshnv.blueprint.ParsingUtils.parseAssert;
-import static io.github.vshnv.blueprint.ParsingUtils.skipSpaces;
+import static io.github.vshnv.skeson.parse.ParsingUtils.parseAssert;
+import static io.github.vshnv.skeson.parse.ParsingUtils.skipSpaces;
 
 public final class ArrayJsonNodeReader implements JsonNodeReader<ArrayJsonNode> {
     private final JsonNodeReaderRegistry nodeReaderRegistry;

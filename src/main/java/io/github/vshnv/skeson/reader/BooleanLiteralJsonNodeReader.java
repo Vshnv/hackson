@@ -1,9 +1,7 @@
-package io.github.vshnv.blueprint.reader;
+package io.github.vshnv.skeson.reader;
 
-import io.github.vshnv.blueprint.IndexedString;
-import io.github.vshnv.blueprint.LiteralJsonNode;
-import io.github.vshnv.blueprint.ParsingUtils;
-import io.github.vshnv.blueprint.literal.BooleanLiteralJsonNode;
+import io.github.vshnv.skeson.parse.IndexedString;
+import io.github.vshnv.skeson.parse.ParsingUtils;
 
 public class BooleanLiteralJsonNodeReader implements JsonNodeReader<Boolean> {
     @Override

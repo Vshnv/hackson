@@ -1,8 +1,9 @@
-package io.github.vshnv.blueprint;
+package io.github.vshnv.skeson;
 
-import io.github.vshnv.blueprint.reader.JsonNodeReader;
+import io.github.vshnv.skeson.parse.IndexedString;
+import io.github.vshnv.skeson.reader.JsonNodeReader;
 
-import static io.github.vshnv.blueprint.ParsingUtils.skipSpaces;
+import static io.github.vshnv.skeson.parse.ParsingUtils.skipSpaces;
 
 public class LiteralReadingJsonNode<T> implements JsonNode {
     private final JsonNodeReader<T> nodeReader;

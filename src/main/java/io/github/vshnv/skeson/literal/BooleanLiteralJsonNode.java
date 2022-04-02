@@ -1,10 +1,9 @@
-package io.github.vshnv.blueprint.literal;
+package io.github.vshnv.skeson.literal;
 
-import io.github.vshnv.blueprint.IndexedString;
-import io.github.vshnv.blueprint.LiteralJsonNode;
-import io.github.vshnv.blueprint.ParsingUtils;
-import io.github.vshnv.blueprint.reader.BooleanLiteralJsonNodeReader;
-import io.github.vshnv.blueprint.reader.JsonNodeReader;
+import io.github.vshnv.skeson.parse.IndexedString;
+import io.github.vshnv.skeson.LiteralJsonNode;
+import io.github.vshnv.skeson.parse.ParsingUtils;
+import io.github.vshnv.skeson.reader.JsonNodeReader;
 
 public class BooleanLiteralJsonNode implements LiteralJsonNode<Boolean> {
     private final JsonNodeReader<Boolean> reader;

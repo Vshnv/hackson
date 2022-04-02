@@ -1,4 +1,6 @@
-package io.github.vshnv.blueprint;
+package io.github.vshnv.skeson.parse;
+
+import io.github.vshnv.skeson.JsonNode;
 
 import java.io.Serializable;
 import java.lang.invoke.SerializedLambda;
@@ -6,7 +8,7 @@ import java.lang.reflect.Method;
 import java.util.Objects;
 import java.util.function.Function;
 
-import static io.github.vshnv.blueprint.LambdaParameterUtils.parameterName;
+import static io.github.vshnv.skeson.LambdaParameterUtils.parameterName;
 
 public interface ObjectEntry extends Function<Void, JsonNode>, Serializable {
     default String name() {
