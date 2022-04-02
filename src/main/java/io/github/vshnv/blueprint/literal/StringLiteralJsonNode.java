@@ -1,12 +1,20 @@
-package io.github.vshnv.blueprint;
+package io.github.vshnv.blueprint.literal;
+
+import io.github.vshnv.blueprint.IndexedString;
+import io.github.vshnv.blueprint.LiteralJsonNode;
+import io.github.vshnv.blueprint.reader.JsonNodeReader;
+
+import java.util.Objects;
 
 import static io.github.vshnv.blueprint.ParsingUtils.parseAssert;
 import static io.github.vshnv.blueprint.ParsingUtils.skipSpaces;
 
 public class StringLiteralJsonNode implements LiteralJsonNode<String> {
+    private final JsonNodeReader<String> reader;
     private String value;
 
-    public StringLiteralJsonNode(final String value) {
+    public StringLiteralJsonNode(final JsonNodeReader<String> reader, final String value) {
+        this.reader = reader;
         this.value = value;
     }
 
@@ -17,21 +25,8 @@ public class StringLiteralJsonNode implements LiteralJsonNode<String> {
 
     @Override
     public void match(final IndexedString indexedString) {
-        skipSpaces(indexedString);
-        final StringBuilder buffer = new StringBuilder();
-        parseAssert(indexedString.getCharAtIndex() == '"');
-        indexedString.incrementIndex();
-        while (indexedString.getCharAtIndex() != '"') {
-            buffer.append(indexedString.getCharAtIndex());
-            indexedString.incrementIndex();
-        }
-        indexedString.incrementIndex();
-        final String value = buffer.toString();
-        if (this.value == null) {
-            this.value = value;
-        } else {
-            parseAssert(this.value.equals(value));
-        }
+        final String value = reader.read(indexedString);
+        parseAssert(Objects.equals(this.value, value));
     }
 
 
