@@ -6,11 +6,11 @@ import io.github.vshnv.skeson.reader.JsonNodeReader;
 
 import static io.github.vshnv.skeson.parse.ParsingUtils.skipSpaces;
 
-public class ObjectReadingJsonNode<T> implements JsonNode {
+public class BranchReadingJsonNode<T extends JsonNode> implements ReadingJsonNode<T> {
     private final JsonNodeReader<T> nodeReader;
-    private final ObjectJsonNode node;
+    private T node;
 
-    public ObjectReadingJsonNode(final JsonNodeReader<T> nodeReader, final ObjectJsonNode node) {
+    public BranchReadingJsonNode(final JsonNodeReader<T> nodeReader, final T node) {
         this.nodeReader = nodeReader;
         this.node = node;
     }
@@ -27,9 +27,12 @@ public class ObjectReadingJsonNode<T> implements JsonNode {
 
     @Override
     public void match(final IndexedString indexedString) {
-        skipSpaces(indexedString);
-        final T t = nodeReader.read(indexedString);
+        this.node = nodeReader.read(indexedString);
+    }
 
+    @Override
+    public T getValue() {
+        return this.node;
     }
 }
 

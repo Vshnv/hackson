@@ -5,7 +5,7 @@ import io.github.vshnv.skeson.reader.JsonNodeReader;
 
 import static io.github.vshnv.skeson.parse.ParsingUtils.skipSpaces;
 
-public class LiteralReadingJsonNode<T> implements JsonNode {
+public class LiteralReadingJsonNode<T> implements ReadingJsonNode<T> {
     private final JsonNodeReader<T> nodeReader;
     private final LiteralJsonNode<T> node;
 
@@ -31,6 +31,7 @@ public class LiteralReadingJsonNode<T> implements JsonNode {
         node.setValue(t);
     }
 
+    @Override
     public T getValue() {
         return node.getValue();
     }

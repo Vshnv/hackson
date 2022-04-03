@@ -51,12 +51,12 @@ public final class Json {
         return new BooleanLiteralJsonNode(GLOBAL_READER_REGISTRY.getReader(Boolean.class), value);
     }
 
-    public static LiteralReadingJsonNode<ArrayJsonNode> matchArray() {
-        return new LiteralReadingJsonNode<>(GLOBAL_READER_REGISTRY.getReader(ArrayJsonNode.class), null);
+    public static BranchReadingJsonNode<ArrayJsonNode> matchArray() {
+        return new BranchReadingJsonNode<>(GLOBAL_READER_REGISTRY.getReader(ArrayJsonNode.class), null);
     }
 
-    public static LiteralReadingJsonNode<ObjectJsonNode> matchObject() {
-        return new LiteralReadingJsonNode<ObjectJsonNode>(GLOBAL_READER_REGISTRY.getReader(ObjectJsonNode.class), null);
+    public static BranchReadingJsonNode<ObjectJsonNode> matchObject() {
+        return new BranchReadingJsonNode<>(GLOBAL_READER_REGISTRY.getReader(ObjectJsonNode.class), null);
     }
 
     public static LiteralReadingJsonNode<Boolean> matchBoolean() {
