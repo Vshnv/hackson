@@ -100,16 +100,18 @@ class HumanJsonAdapter implements JsonAdapter < Human > {
   <summary>Plain Json Read</summary>
   
  ```java
+final LiteralReadingJsonNode<String> nameMatcher = matchString();
+final LiteralReadingJsonNode<Number> ageMatcher = matchNumber();
+final BranchReadingJsonNode<ObjectJsonNode> addressMatcher = matchObject();
 final JsonNode node = obj(
-    name -> lit("Vaishnav"),
-    age -> lit(21),
-    address -> obj(
-        street -> lit("Some where"),
-        city -> lit("In some City"),
-        state -> lit("In some State")
-    )
+    name -> nameMatcher,
+    age -> ageMatcher,
+    address -> addressMatcher
 );
-System.out.println(node);
+node.match(jsonString);
+System.out.printf("Name: %s\n", nameMatcher.getValue());
+System.out.printf("Age: %s\n", ageMatcher.getValue());
+System.out.printf("Address: %s\n", addressMatcher.getValue());
 ```
 
 </details>
